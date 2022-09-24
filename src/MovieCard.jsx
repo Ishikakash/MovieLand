@@ -3,18 +3,18 @@ import React from 'react';
 const MovieCard = ({ movie: { id, y, i, l, q } }) => {
   console.log(i)
   return (
-    <div className="movie" key={imdbID}>
+    <div className="movie" key={id}>
       <div>
-        <p>{Year}</p>
+        <p>{y}</p>
       </div>
 
       <div>
-        <img src={Poster !== "N/A" ? Poster : "https://via.placeholder.com/400"} alt={Title} />
+        <img src="" alt={l} />
       </div>
 
       <div>
-        <span>{Type}</span>
-        <h3>{Title}</h3>
+        <span>{q}</span>
+        <h3>{l}</h3>
       </div>
     </div>
   );
