@@ -27,7 +27,7 @@ const App = () => {
     const data = await response.json();
 	  console.log(data.d);
 
-    setMovies(data.q);
+    setMovies(data.d);
   };
 
   return (
