@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MovieCard = ({ movie: { id, y, i, l, q } }) => {
-  console.log(iimageUrl)
+  console.log(i.imageUrl)
   return (
     <div className="movie" key={id}>
       <div>
