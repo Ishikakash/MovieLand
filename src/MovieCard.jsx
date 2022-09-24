@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MovieCard = ({ movie: { id, y, i, l, q } }) => {
-  console.log(i.imageUrl)
+  
   return (
     <div className="movie" key={id}>
       <div>
@@ -9,7 +9,7 @@ const MovieCard = ({ movie: { id, y, i, l, q } }) => {
       </div>
 
       <div>
-        <img src={i.imageUrl} alt={l} />
+        <img src={i.imageUrl ? i.imageUrl : "https://via.placeholder.com/400"} alt={l} />
       </div>
 
       <div>
