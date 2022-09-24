@@ -1,6 +1,7 @@
 import React from 'react';
 
-const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
+const MovieCard = ({ movie: { id, y, i, l, q } }) => {
+  console.log(i)
   return (
     <div className="movie" key={imdbID}>
       <div>
