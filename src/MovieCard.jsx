@@ -9,7 +9,7 @@ const MovieCard = ({ movie: { id, y, i, l, q } }) => {
       </div>
 
       <div>
-        <img src="" alt={l} />
+        <img src={i.imageUrl} alt={l} />
       </div>
 
       <div>
