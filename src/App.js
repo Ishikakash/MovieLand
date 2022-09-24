@@ -4,7 +4,7 @@ import MovieCard from "./MovieCard";
 import SearchIcon from "./search.svg";
 import "./App.css";
 
-const API_URL = "https://imdb8.p.rapidapi.com/auto-complete?q=b";
+const API_URL = "https://imdb8.p.rapidapi.com/auto-complete";
 
 const App = () => {
   // react hook
@@ -16,7 +16,14 @@ const App = () => {
   }, []);
 
   const searchMovies = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
+    const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '55d8e2494fmshc7d5e0beb194aa8p1ceea5jsnc00a496d4ed0',
+		'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
+	}
+};
+    const response = await fetch(`${API_URL}?q=${title}`,options);
     const data = await response.json();
 
     setMovies(data.Search);
